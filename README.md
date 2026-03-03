@@ -9,7 +9,8 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 1   | Hello World               | ✅     |
 | 2   | Lucian's Luscious Lasagna | ✅     |
 | 3   | Annalyn's Infiltration    | ✅     |
-| 4   | Freelancer Rates.         | ✅     |
+| 4   | Freelancer Rates          | ✅     |
+| 5   | Poetry Club Door Policy   | ✅     |
 
 ---
 
