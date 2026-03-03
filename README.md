@@ -4,11 +4,12 @@ This repository contains my solutions to the Exercism JavaScript track.
 
 ## Progress
 
-| #   | Exercise Name             | Status       |
-| --- | ------------------------- | ------------ |
-| 1   | Hello World               | ✅ Completed |
-| 2   | Lucian's Luscious Lasagna | ✅ Completed |
-| 3   | Annalyn's Infiltration    | ✅ Completed |
+| #   | Exercise Name             | Status |
+| --- | ------------------------- | ------ |
+| 1   | Hello World               | ✅     |
+| 2   | Lucian's Luscious Lasagna | ✅     |
+| 3   | Annalyn's Infiltration    | ✅     |
+| 4   | Freelancer Rates.         | ✅     |
 
 ---
 
