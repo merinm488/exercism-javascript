@@ -13,6 +13,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 5   | Poetry Club Door Policy   | ✅     |
 | 6   | Elyses Enchantments       | ✅     |
 | 7   | Vehicle Purchase          | ✅     |
+| 8   | Bird Watcher              | ✅     |
 
 ---
 
