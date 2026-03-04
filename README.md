@@ -11,6 +11,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 3   | Annalyn's Infiltration    | ✅     |
 | 4   | Freelancer Rates          | ✅     |
 | 5   | Poetry Club Door Policy   | ✅     |
+| 6   | Elysis Enchatments   | ✅     |
 
 ---
 
