@@ -14,6 +14,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 6   | Elyses Enchantments       | ✅     |
 | 7   | Vehicle Purchase          | ✅     |
 | 8   | Bird Watcher              | ✅     |
+| 9   | Mixed Juices              | ✅     |
 
 ---
 
