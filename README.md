@@ -18,6 +18,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 10  | High Score Board          | ✅     |
 | 11  | Amusement Park            | ✅     |
 | 12  | Lucky Numbers             | ✅     |
+| 13  | Lasagna Master            | ✅     |
 
 ---
 
