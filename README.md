@@ -16,6 +16,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 8   | Bird Watcher              | ✅     |
 | 9   | Mixed Juices              | ✅     |
 | 10  | High Score Board          | ✅     |
+| 11  | Amusement Park            | ✅     |
 
 ---
 
