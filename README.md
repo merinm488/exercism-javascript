@@ -20,7 +20,8 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 12  | Lucky Numbers              | ✅     |
 | 13  | Lasagna Master             | ✅     |
 | 14  | Custom Signs               | ✅     |
-| 14  | Coordinate Transformations | ✅     |
+| 15  | Coordinate Transformations | ✅     |
+| 16  | Captains Log               | ✅     |
 
 ---
 
