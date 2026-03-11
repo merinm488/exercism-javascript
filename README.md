@@ -24,6 +24,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 16  | Captains Log                     | ✅     |
 | 17  | Fruit Picker                     | ✅     |
 | 18  | Elyses Destructured Enchantments | ✅     |
+| 19  | Elyses Analytic Enchantments     | ✅     |
 
 ---
 
