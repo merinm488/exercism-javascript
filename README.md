@@ -22,6 +22,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 14  | Custom Signs               | ✅     |
 | 15  | Coordinate Transformations | ✅     |
 | 16  | Captains Log               | ✅     |
+| 17  | Fruit Picker               | ✅     |
 
 ---
 
