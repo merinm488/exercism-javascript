@@ -25,6 +25,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 17  | Fruit Picker                     | ✅     |
 | 18  | Elyses Destructured Enchantments | ✅     |
 | 19  | Elyses Analytic Enchantments     | ✅     |
+| 20  | Train Driver                     | ✅     |
 
 ---
 
