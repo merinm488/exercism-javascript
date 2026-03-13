@@ -27,6 +27,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 19  | Elyses Analytic Enchantments      | ✅     |
 | 20  | Train Driver                      | ✅     |
 | 21  | Elyses Transformtive Enchantments | ✅     |
+| 22  | Line Up                           | ✅     |
 
 ---
 
