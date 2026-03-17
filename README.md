@@ -28,8 +28,9 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 20  | Train Driver                       | ✅     |
 | 21  | Elyses Transformative Enchantments | ✅     |
 | 22  | Line Up                            | ✅     |
-| 22  | Windowing System                   | ✅     |
-| 23  | Elyses Looping Enchantments        | ✅     |
+| 23  | Windowing System                   | ✅     |
+| 24  | Elyses Looping Enchantments        | ✅     |
+| 25  | Appointment Time                   | ✅     |
 
 ---
 
