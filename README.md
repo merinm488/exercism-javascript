@@ -31,6 +31,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 23  | Windowing System                   | ✅     |
 | 24  | Elyses Looping Enchantments        | ✅     |
 | 25  | Appointment Time                   | ✅     |
+| 26  | Two Fer                            | ✅     |
 
 ---
 
