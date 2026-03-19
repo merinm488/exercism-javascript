@@ -36,6 +36,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 28  | Resistor Color Duo                 | ✅     |
 | 29  | Gigasecond                         | ✅     |
 | 30  | RNA Transcription                  | ✅     |
+| 31  | Space Age                          | ✅     |
 
 ---
 
