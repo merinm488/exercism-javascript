@@ -37,6 +37,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 29  | Gigasecond                         | ✅     |
 | 30  | RNA Transcription                  | ✅     |
 | 31  | Space Age                          | ✅     |
+| 32  | Pangram                            | ✅     |
 
 ---
 

@@ -11,6 +11,6 @@ export const age = (planet,seconds) => {
     let planetAge = seconds/(earthinSeconds * orbit[planet]);
     return Number(planetAge.toFixed(2));
   }
-  else throw new Error("not a planet")
+  else throw new Error("not a planet");
 
 }
