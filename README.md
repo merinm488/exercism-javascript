@@ -34,6 +34,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 26  | Two Fer                            | ✅     |
 | 27  | Resistor Color                     | ✅     |
 | 28  | Resistor Color Duo                 | ✅     |
+| 29  | Gigasecond                         | ✅     |
 
 ---
 
