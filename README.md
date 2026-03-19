@@ -35,6 +35,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 27  | Resistor Color                     | ✅     |
 | 28  | Resistor Color Duo                 | ✅     |
 | 29  | Gigasecond                         | ✅     |
+| 30  | RNA Transcription                  | ✅     |
 
 ---
 
