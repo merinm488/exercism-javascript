@@ -39,6 +39,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 31  | Space Age                          | ✅     |
 | 32  | Pangram                            | ✅     |
 | 33  | Leap                               | ✅     |
+| 34  | Reverse String                     | ✅     |
 
 ---
 
