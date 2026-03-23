@@ -40,6 +40,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 32  | Pangram                            | ✅     |
 | 33  | Leap                               | ✅     |
 | 34  | Reverse String                     | ✅     |
+| 35  | ETL                                | ✅     |
 
 ---
 
