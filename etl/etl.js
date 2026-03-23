@@ -5,11 +5,11 @@
 
 export const transform = (old) => {
   let output = {};
-  for (let i in old)
+  for (let arr in old)
   {
-    for (let j in old[i])
+    for (let letter of old[arr])
     {
-      output[old[i][j].toLowerCase()] = Number(i);
+      output[letter.toLowerCase()] = Number(arr);
     }
   }
   return output;
