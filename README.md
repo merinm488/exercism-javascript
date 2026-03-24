@@ -41,6 +41,8 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 33  | Leap                               | ✅     |
 | 34  | Reverse String                     | ✅     |
 | 35  | ETL                                | ✅     |
+| 36  | Raindrops                          | ✅     |
+| 37  | Anagram                            | ✅     |
 
 ---
 
