@@ -43,6 +43,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 35  | ETL                                | ✅     |
 | 36  | Raindrops                          | ✅     |
 | 37  | Anagram                            | ✅     |
+| 37  | Matching Brackets                  | ✅     |
 
 ---
 
