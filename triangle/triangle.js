@@ -9,7 +9,7 @@ export class Triangle {
     this.b = b;
     this.c = c;
   }
-
+  //method
   isValid()
   {
     if (this.a>0 && this.b>0 && this.c>0 && (this.a+this.b)>=this.c && (this.b+this.c)>=this.a && (this.a+this.c)>=this.b) return true;

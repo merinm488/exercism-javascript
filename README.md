@@ -45,6 +45,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 37  | Anagram                            | ✅     |
 | 38  | Matching Brackets                  | ✅     |
 | 39  | Triangle                           | ✅     |
+| 40  | Difference of Squares              | ✅     |
 
 ---
 
