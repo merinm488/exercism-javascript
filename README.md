@@ -46,6 +46,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 38  | Matching Brackets                  | ✅     |
 | 39  | Triangle                           | ✅     |
 | 40  | Difference of Squares              | ✅     |
+| 41  | High Scores                        | ✅     |
 
 ---
 
