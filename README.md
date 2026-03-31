@@ -47,6 +47,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 39  | Triangle                           | ✅     |
 | 40  | Difference of Squares              | ✅     |
 | 41  | High Scores                        | ✅     |
+| 42  | Matrix                             | ✅     |
 
 ---
 
