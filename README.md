@@ -48,6 +48,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 40  | Difference of Squares              | ✅     |
 | 41  | High Scores                        | ✅     |
 | 42  | Matrix                             | ✅     |
+| 43  | Factory Sensors                    | ✅     |
 
 ---
 
