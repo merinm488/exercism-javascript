@@ -51,6 +51,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 43  | Factory Sensors                    | ✅     |
 | 44  | Ozan's Playlist                    | ✅     |
 | 45  | Regular Chatbot                    | ✅     |
+| 46  | Pizza Order                        | ✅     |
 
 ---
 
