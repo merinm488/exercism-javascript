@@ -53,6 +53,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 45  | Regular Chatbot                    | ✅     |
 | 46  | Pizza Order                        | ✅     |
 | 47  | Assembly Line                      | ✅     |
+| 48  | Bob                                | ✅     |
 
 ---
 
