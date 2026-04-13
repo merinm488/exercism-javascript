@@ -55,6 +55,8 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 47  | Assembly Line                      | ✅     |
 | 48  | Bob                                | ✅     |
 | 49  | Perfect Numbers                    | ✅     |
+| 50  | Collatz Conjecture                 | ✅     |
+| 51  | Hamming                            | ✅     |
 
 ---
 
