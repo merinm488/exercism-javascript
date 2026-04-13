@@ -57,6 +57,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 49  | Perfect Numbers                    | ✅     |
 | 50  | Collatz Conjecture                 | ✅     |
 | 51  | Hamming                            | ✅     |
+| 52  | Acronym                            | ✅     |
 
 ---
 
