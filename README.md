@@ -59,6 +59,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 51  | Hamming                            | ✅     |
 | 52  | Acronym                            | ✅     |
 | 53  | Isogram                            | ✅     |
+| 54  | Phone Number                       | ✅     |
 
 ---
 
