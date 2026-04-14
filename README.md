@@ -58,6 +58,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 50  | Collatz Conjecture                 | ✅     |
 | 51  | Hamming                            | ✅     |
 | 52  | Acronym                            | ✅     |
+| 53  | Isogram                            | ✅     |
 
 ---
 
