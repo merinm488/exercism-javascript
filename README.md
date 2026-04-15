@@ -60,6 +60,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 52  | Acronym                            | ✅     |
 | 53  | Isogram                            | ✅     |
 | 54  | Phone Number                       | ✅     |
+| 55  | Series                             | ✅     |
 
 ---
 
