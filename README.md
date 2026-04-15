@@ -61,6 +61,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 53  | Isogram                            | ✅     |
 | 54  | Phone Number                       | ✅     |
 | 55  | Series                             | ✅     |
+| 56  | Transpose                          | ✅     |
 
 ---
 
