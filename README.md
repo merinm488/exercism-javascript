@@ -64,6 +64,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 56  | Transpose                          | ✅     |
 | 57  | Rotational Cipher                  | ✅     |
 | 58  | Armstrong Numbers                  | ✅     |
+| 59  | Protein Translations               | ✅     |
 
 ---
 
