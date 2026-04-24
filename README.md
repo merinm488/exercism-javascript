@@ -65,7 +65,8 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 57  | Rotational Cipher                  | ✅     |
 | 58  | Armstrong Numbers                  | ✅     |
 | 59  | Protein Translations               | ✅     |
-| 59  | D&D Characters                     | ✅     |
+| 60  | D&D Characters                     | ✅     |
+| 61  | Run Length Encoding                | ✅     |
 
 ---
 
