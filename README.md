@@ -67,6 +67,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 59  | Protein Translations               | ✅     |
 | 60  | D&D Characters                     | ✅     |
 | 61  | Run Length Encoding                | ✅     |
+| 62  | Darts                              | ✅     |
 
 ---
 
