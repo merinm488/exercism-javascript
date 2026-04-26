@@ -70,6 +70,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 62  | Darts                              | ✅     |
 | 63  | Roman Numerals                     | ✅     |
 | 64  | Bank Account                       | ✅     |
+| 65  | Diffie Hellman                     | ✅     |
 
 ---
 
