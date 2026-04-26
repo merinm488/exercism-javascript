@@ -69,6 +69,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 61  | Run Length Encoding                | ✅     |
 | 62  | Darts                              | ✅     |
 | 63  | Roman Numerals                     | ✅     |
+| 64  | Bank Account                       | ✅     |
 
 ---
 
