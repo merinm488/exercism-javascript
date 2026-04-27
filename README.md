@@ -72,6 +72,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 64  | Bank Account                       | ✅     |
 | 65  | Diffie Hellman                     | ✅     |
 | 66  | Tournament                         | ✅     |
+| 67  | Rail Fence Cipher                  | ✅     |
 
 ---
 
