@@ -76,6 +76,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 68  | Eliud's Eggs                       | ✅     |
 | 69  | Game of Life                       | ✅     |
 | 70  | Micro Blog                         | ✅     |
+| 70  | Luhn                               | ✅     |
 
 ---
 
