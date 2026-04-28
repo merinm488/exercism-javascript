@@ -74,6 +74,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 66  | Tournament                         | ✅     |
 | 67  | Rail Fence Cipher                  | ✅     |
 | 68  | Eliud's Eggs                       | ✅     |
+| 69  | Game of Life                       | ✅     |
 
 ---
 
