@@ -73,6 +73,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 65  | Diffie Hellman                     | ✅     |
 | 66  | Tournament                         | ✅     |
 | 67  | Rail Fence Cipher                  | ✅     |
+| 68  | Eliud's Eggs                       | ✅     |
 
 ---
 
