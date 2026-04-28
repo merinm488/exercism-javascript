@@ -8,7 +8,7 @@ export class GameOfLife {
     this.matrix = matrix;
   }
 
-  tick(matrix) {
+  tick() {
     const result = this.matrix.map(row => row.map(() => 0));
     for (let i=0; i<this.matrix.length;i++)
     {
@@ -27,10 +27,9 @@ export class GameOfLife {
       
         if(this.matrix[i][j] == 1 && (count == 2 || count == 3)) result[i][j] = 1
         else if (this.matrix[i][j] == 0 && count == 3) result[i][j] = 1
-        else result[i][j] = 0;
       }
     }
-    return this.matrix = result.map(row => [...row]);
+    return this.matrix = result;
   }
 
   state() {
