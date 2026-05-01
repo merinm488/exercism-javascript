@@ -66,14 +66,7 @@ export function sandwichTrick(deck) {
  */
 export function twoIsSpecial(deck) 
 {
-  return deck.reduce((result,card) =>
-  {
-    if (card ==2)
-    {
-      result.push(card);
-    }
-    return result;
-  }, [])
+  return deck.filter((num)=>num===2);
 }
 
 /**
@@ -84,8 +77,8 @@ export function twoIsSpecial(deck)
  * @returns {number[]} ordered deck
  */
 export function perfectlyOrdered(deck) {
-  let sorted = [...deck].sort((a,b) => a-b);
-  return sorted;
+  deck.sort((a,b)=> a-b);
+  return deck;
 }
 
 /**
