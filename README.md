@@ -78,6 +78,8 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 70  | Micro Blog                         | ✅     |
 | 71  | Luhn                               | ✅     |
 | 72  | Word Count                         | ✅     |
+| 73  | Nucleotide Count                   | ✅     |
+| 74  | Scrabble Score                     | ✅     |
 
 ---
 
