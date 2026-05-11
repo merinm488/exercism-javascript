@@ -81,6 +81,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 73  | Nucleotide Count                   | ✅     |
 | 74  | Scrabble Score                     | ✅     |
 | 75  | ISBN Verifier                      | ✅     |
+| 76  | Allergies                          | ✅     |
 
 ---
 
