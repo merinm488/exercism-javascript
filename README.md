@@ -80,6 +80,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 72  | Word Count                         | ✅     |
 | 73  | Nucleotide Count                   | ✅     |
 | 74  | Scrabble Score                     | ✅     |
+| 75  | ISBN Verifier                      | ✅     |
 
 ---
 
