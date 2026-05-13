@@ -85,6 +85,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 77  | Grade School                       | ✅     |
 | 78  | Robot Name                         | ✅     |
 | 79  | Clock                              | ✅     |
+| 80  | Meetup                             | ✅     |
 
 ---
 
