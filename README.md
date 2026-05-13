@@ -83,6 +83,8 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 75  | ISBN Verifier                      | ✅     |
 | 76  | Allergies                          | ✅     |
 | 77  | Grade School                       | ✅     |
+| 78  | Robot Name                         | ✅     |
+| 79  | Clock                              | ✅     |
 
 ---
 
