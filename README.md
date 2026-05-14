@@ -87,6 +87,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 79  | Clock                              | ✅     |
 | 80  | Meetup                             | ✅     |
 | 81  | Food Chain                         | ✅     |
+| 82  | Proverb                            | ✅     |
 
 ---
 
