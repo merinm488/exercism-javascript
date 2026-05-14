@@ -88,6 +88,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 80  | Meetup                             | ✅     |
 | 81  | Food Chain                         | ✅     |
 | 82  | Proverb                            | ✅     |
+| 83  | Bottle Song                        | ✅     |
 
 ---
 
