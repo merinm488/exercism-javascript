@@ -6,7 +6,7 @@
 export const meetup = (year,month,nth,day) => {
   let week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   let weekValue = ['first','second','third','fourth'];
-  let lastDay = new Date(year,month,0).getDate(); //to get the last day of month for loop
+  let lastDay = new Date(year,month,0).getDate(); //to get the last day of month for loop, used for loop
   let count = 0;
   let nthIndex = weekValue.indexOf(nth)+1; //to get the index and compare with the count
   //testing the last day
