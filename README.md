@@ -89,6 +89,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 81  | Food Chain                         | ✅     |
 | 82  | Proverb                            | ✅     |
 | 83  | Bottle Song                        | ✅     |
+| 84  | House                              | ✅     |
 
 ---
 

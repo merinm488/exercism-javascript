@@ -7,7 +7,7 @@ export const recite = (initialBottlesCount, takeDownCount) => {
   const words = ['no', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten']; 
   
   let result = [];
-  for(let i=0; i<takeDownCount; i++)
+  for(let i=0; i<takeDownCount; i++) //loop will handles the different verses
   {
     let bottlesCurrent = initialBottlesCount == 1 ? 'bottle' : 'bottles';
     let bottlesRemaining = initialBottlesCount-1 == 1 ? 'bottle' : 'bottles';
