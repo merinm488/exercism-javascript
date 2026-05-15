@@ -90,6 +90,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 82  | Proverb                            | ✅     |
 | 83  | Bottle Song                        | ✅     |
 | 84  | House                              | ✅     |
+| 85  | Twelve Days                        | ✅     |
 
 ---
 
