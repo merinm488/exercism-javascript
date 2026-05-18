@@ -11,7 +11,7 @@ export const say = (n) => {
   const scales = ['','thousand','million','billion'];
   
 
-  function SayChunk(n)
+  function SayChunk(n) //function to handle 0-999
   { 
     if (n==0) return 'zero';
     let result = '';
@@ -37,8 +37,8 @@ export const say = (n) => {
   }
 
 
-  let result = [];
-  let chunks = [];
+  let result = []; //to put the number with its scales
+  let chunks = []; //to put the number chunks
   if (n>=1000)
   {
     while (n>0)

@@ -92,6 +92,8 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 84  | House                              | ✅     |
 | 85  | Twelve Days                        | ✅     |
 | 86  | Say                                | ✅     |
+| 87  | List Ops                           | ✅     |
+| 88  | Flatten Array                      | ✅     |
 
 ---
 
