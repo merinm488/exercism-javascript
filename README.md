@@ -98,6 +98,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 90  | Pascal's Triangle                  | ✅     |
 | 91  | Prime Factors                      | ✅     |
 | 92  | Grains                             | ✅     |
+| 93  | Sum of Multiples                   | ✅     |
 
 ---
 
