@@ -93,7 +93,9 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 85  | Twelve Days                        | ✅     |
 | 86  | Say                                | ✅     |
 | 87  | List Ops                           | ✅     |
-| 88  | Flatten Array                      | ✅     |
+| 88  | Strain                             | ✅     |
+| 89  | Flatten Array                      | ✅     |
+| 90  | Pascal's Triangle                  | ✅     |
 
 ---
 
