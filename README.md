@@ -96,6 +96,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 88  | Strain                             | ✅     |
 | 89  | Flatten Array                      | ✅     |
 | 90  | Pascal's Triangle                  | ✅     |
+| 91  | Prime Factors                      | ✅     |
 
 ---
 
