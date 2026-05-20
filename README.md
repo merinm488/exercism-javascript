@@ -99,6 +99,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 91  | Prime Factors                      | ✅     |
 | 92  | Grains                             | ✅     |
 | 93  | Sum of Multiples                   | ✅     |
+| 94  | Secret Handshake                   | ✅     |
 
 ---
 
