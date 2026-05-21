@@ -103,6 +103,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 95  | Linked List                        | ✅     |
 | 96  | Custom Set                         | ✅     |
 | 97  | Sublist                            | ✅     |
+| 98  | Binary Search                      | ✅     |
 
 ---
 
