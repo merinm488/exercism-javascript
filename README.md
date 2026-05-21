@@ -101,6 +101,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 93  | Sum of Multiples                   | ✅     |
 | 94  | Secret Handshake                   | ✅     |
 | 95  | Linked List                        | ✅     |
+| 96  | Custom Set                         | ✅     |
 
 ---
 
