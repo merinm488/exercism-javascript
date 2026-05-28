@@ -104,6 +104,13 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 96  | Custom Set                         | ✅     |
 | 97  | Sublist                            | ✅     |
 | 98  | Binary Search                      | ✅     |
+| 99  | Binary Search Tree                 | ✅     |
+| 100 | Kindergarten Garden                | ✅     |
+| 101 | Queen Attack                       | ✅     |
+| 102 | Saddle Points                      | ✅     |
+| 103 | Spiral Matrix                      | ✅     |
+| 104 | Rectangle                          | ✅     |
+| 105 | OCR Numbers                        | ✅     |
 
 ---
 

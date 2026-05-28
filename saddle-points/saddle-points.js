@@ -13,7 +13,8 @@ export const saddlePoints = (trees) => {
       if (item[c] === max) maxCols.push(c);
     }
 
-    for (let maxCol of maxCols) {
+    for (let maxCol of maxCols) 
+    {
       let min = Infinity;
       for (let i = 0; i < trees.length; i++) {
         if (trees[i][maxCol] < min) {

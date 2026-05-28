@@ -6,6 +6,7 @@
 export const spiralMatrix = (n) => {
   const grid = Array.from({length: n}, () => new Array(n).fill(0));
   let count = 1;
+  //the below variables will be updated after each loop to update the new top row 
   let top=0;
   let bottom = n-1;
   let left = 0;
@@ -15,8 +16,8 @@ export const spiralMatrix = (n) => {
 
     for(let col=left; col<=right; col++)
     {
-      grid[top][col] = count
-      count++
+      grid[top][col] = count;
+      count++;
     }
     top++;
     for(let row = top; row<=bottom;row++)
