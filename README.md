@@ -112,6 +112,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 104 | Rectangle                          | ✅     |
 | 105 | OCR Numbers                        | ✅     |
 | 106 | Relative Distance                  | ✅     |
+| 107 | Promises Basics                    | ✅     |
 
 ---
 
