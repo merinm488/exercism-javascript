@@ -1,3 +1,4 @@
+
 // PROMISE BASICS 4 - Practice Exercise
 //
 // This exercise introduces new Promise methods and patterns.
@@ -8,9 +9,6 @@
 //   - .finally() - runs code after a promise settles, regardless of outcome
 //   - Promise.race() - settles with the first promise that completes
 //   - Returning a promise from inside .then()
-//
-// REVIEWED CONCEPTS:
-//   - Everything from exercises 1, 2, and 3
 
 // =============================================================================
 // TASK 1: Get results from ALL promises (even rejected ones)
@@ -40,7 +38,7 @@
 //        ]
 //
 export function allResults(promises) {
-  throw new Error('Implement allResults');
+  return Promise.allSettled(promises)
 }
 
 // =============================================================================
@@ -66,7 +64,9 @@ export function allResults(promises) {
 //     => resolves with 0
 //
 export function countSuccesses(promises) {
-  throw new Error('Implement countSuccesses');
+  return Promise.allSettled(promises).then(obj => {
+    return obj.filter(item => item.status === 'fulfilled').length
+  })
 }
 
 // =============================================================================
@@ -88,7 +88,11 @@ export function countSuccesses(promises) {
 //     => rejects with Error("fail"), and cleaned becomes true
 //
 export function withCleanup(promise, cleanupFn) {
-  throw new Error('Implement withCleanup');
+  return promise.then(value => {
+    return value
+  }).finally(() => {
+    return cleanupFn()
+  })
 }
 
 // =============================================================================
@@ -112,7 +116,7 @@ export function withCleanup(promise, cleanupFn) {
 //   firstResult(mixed) => rejects with Error("err")
 //
 export function firstResult(promises) {
-  throw new Error('Implement firstResult');
+  return Promise.race(promises)
 }
 
 // =============================================================================
@@ -137,7 +141,11 @@ export function firstResult(promises) {
 //   fetchUserOrders(userPromise2, fetchOrders2) => resolves with [201]
 //
 export function fetchUserOrders(userPromise, fetchOrders) {
-  throw new Error('Implement fetchUserOrders');
+  return userPromise.then(value => {
+    return value.id
+  }).then(result => {
+    return fetchOrders(result)
+  })
 }
 
 // =============================================================================
@@ -164,5 +172,17 @@ export function fetchUserOrders(userPromise, fetchOrders) {
 //     => resolves with "error"
 //
 export function validateTransformDelay(stringPromise) {
-  throw new Error('Implement validateTransformDelay');
+  return stringPromise.then(value => {
+    if (value.length >=3)
+    {
+      return new Promise (resolve => {
+        setTimeout(() => {
+        resolve(value.toUpperCase())
+      }, 50); 
+      })
+    }
+    else throw new Error('too short')
+  }).catch(() => {
+    return 'error'
+  })
 }
