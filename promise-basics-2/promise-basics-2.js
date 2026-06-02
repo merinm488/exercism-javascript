@@ -14,6 +14,8 @@
 // HINT: Read the test file (promise-basics-2.spec.js) if you're unsure
 // what's expected. Tests show exactly what each function should do.
 
+//import { count } from "node:console"
+
 // =============================================================================
 // TASK 1: Create a welcome message promise
 // =============================================================================
@@ -26,7 +28,7 @@
 //   welcome("Alex")   => resolves with "Welcome, Alex!"
 //
 export function welcome(name) {
-  throw new Error('Implement welcome');
+  return Promise.resolve(`Welcome, ${name}!`)
 }
 
 // =============================================================================
@@ -46,7 +48,9 @@ export function welcome(name) {
 //   and   "which Promise method creates a rejected promise?"
 //
 export function validateAge(age) {
-  throw new Error('Implement validateAge');
+  if (age>=18)
+    return Promise.resolve('allowed')
+  else return Promise.reject(new Error('too young'))
 }
 
 // =============================================================================
@@ -66,7 +70,9 @@ export function validateAge(age) {
 //   Use .then() to extract the capital property.
 //
 export function getCapital(countryPromise) {
-  throw new Error('Implement getCapital');
+  return countryPromise.then(country => {
+    return country.capital
+  })
 }
 
 // =============================================================================
@@ -88,7 +94,11 @@ export function getCapital(countryPromise) {
 //   The .catch() should return 0.
 //
 export function doubleOrZero(promise) {
-  throw new Error('Implement doubleOrZero');
+  return promise.then(value => {
+    return value*2
+  }).catch(() => {
+    return 0
+  })
 }
 
 // =============================================================================
@@ -114,7 +124,9 @@ export function doubleOrZero(promise) {
 //   You've used reduce() before in earlier exercises!
 //
 export function getTotalPrice(itemPromises) {
-  throw new Error('Implement getTotalPrice');
+  return Promise.all(itemPromises).then(value => {
+    return value.reduce((acc,curr) => acc + (curr.price),0)
+  })
 }
 
 // =============================================================================
@@ -149,5 +161,11 @@ export function getTotalPrice(itemPromises) {
 //   });
 //
 export function promisify(fetchData) {
-  throw new Error('Implement promisify');
+  return new Promise((resolve,reject) => {
+    fetchData ((error, data) => {
+      if (error == null)
+        resolve(data)
+      else reject(error)
+    })
+  })
 }
