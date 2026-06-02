@@ -114,6 +114,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 106   | Relative Distance                  | ✅     |
 | 107.1 | Promises Basics                    | ✅     |
 | 107.2 | Promises Basics-2                  | ✅     |
+| 107.3 | Promises Basics-3                  | ✅     |
 
 ---
 

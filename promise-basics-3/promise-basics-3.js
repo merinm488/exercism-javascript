@@ -37,7 +37,10 @@
 //     .then(doubled => "Result: " + doubled)
 //
 export function doubleAndFormat(promise) {
-  throw new Error('Implement doubleAndFormat');
+  return promise.then(value => {
+    return value*2}).then(result => {
+      return 'Result: ' + result
+    })
 }
 
 // =============================================================================
@@ -62,7 +65,10 @@ export function doubleAndFormat(promise) {
 //   You know all these array methods already!
 //
 export function getTopStudents(studentPromises) {
-  throw new Error('Implement getTopStudents');
+  return Promise.all(studentPromises)
+          .then(array => {
+          return array.filter(item => item.grade>=70).map(item => item.name)
+          })
 }
 
 // =============================================================================
@@ -83,7 +89,10 @@ export function getTopStudents(studentPromises) {
 //     => resolves with "no email"
 //
 export function extractEmail(userPromise) {
-  throw new Error('Implement extractEmail');
+  return userPromise.then(value => {
+    return value.profile.email
+  }).catch(() => {
+    return 'no email'})
 }
 
 // =============================================================================
@@ -116,7 +125,14 @@ export function extractEmail(userPromise) {
 //   })
 //
 export function greetIfAdult(personPromise) {
-  throw new Error('Implement greetIfAdult');
+  return personPromise.then(obj => {
+    if (obj.age >=18) return obj.name
+    else throw new Error('underage')
+  }).then(value => {
+    return `Hello, ${value}!`
+  }).catch(() => {
+    return 'access denied'
+  })
 }
 
 // =============================================================================
@@ -140,7 +156,9 @@ export function greetIfAdult(personPromise) {
 // HINT: Same pattern as getTotalPrice from exercise 2, but summing quantity.
 //
 export function countItems(itemPromises) {
-  throw new Error('Implement countItems');
+  return Promise.all(itemPromises).then(obj => {
+    return obj.reduce((acc,curr) => acc+curr.quantity,0)
+  })
 }
 
 // =============================================================================
@@ -164,5 +182,10 @@ export function countItems(itemPromises) {
 //   of calling resolve() immediately, you wait for the timer.
 //
 export function delayResolve(value, delay) {
-  throw new Error('Implement delayResolve');
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(value)
+    }, delay);
+  })
 }
+
