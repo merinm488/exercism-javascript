@@ -1,3 +1,4 @@
+
 // PROMISE BASICS 5 - Practice Exercise
 //
 // This exercise covers more core Promise patterns using .then() chains.
@@ -41,7 +42,7 @@
 //   firstSuccess(allBad) => rejects with AggregateError (errors property has both errors)
 //
 export function firstSuccess(promises) {
-  throw new Error('Implement firstSuccess');
+  return Promise.any(promises)
 }
 
 // =============================================================================
@@ -64,7 +65,12 @@ export function firstSuccess(promises) {
 //   withTimeout(fast, 1000) => resolves with "quick"
 //
 export function withTimeout(promise, ms) {
-  throw new Error('Implement withTimeout');
+  const timerPromise = new Promise((_, reject) => {
+    setTimeout(() => {
+      reject(new Error ('timeout'))
+    }, ms);
+  })
+  return Promise.race([promise, timerPromise])
 }
 
 // =============================================================================
@@ -93,7 +99,12 @@ export function withTimeout(promise, ms) {
 //   retry(alwaysFails, 3) => rejects with Error("nope")
 //
 export function retry(fn, attempts) {
-  throw new Error('Implement retry');
+  if (attempts === 1)
+    return fn()
+  if (attempts > 1)
+  {
+    return fn().catch(() => retry(fn,attempts-1))
+  }
 }
 
 // =============================================================================
@@ -115,7 +126,7 @@ export function retry(fn, attempts) {
 //   fetchParallel([], fetchFn) => resolves with []
 //
 export function fetchParallel(items, fetchFn) {
-  throw new Error('Implement fetchParallel');
+  return Promise.all(items.map(item => fetchFn(item)))
 }
 
 // =============================================================================
@@ -142,7 +153,11 @@ export function fetchParallel(items, fetchFn) {
 //   fetchSequential([], processFn) => resolves with []
 //
 export function fetchSequential(items, processFn) {
-  throw new Error('Implement fetchSequential');
+  return items.reduce((promise, item) => {
+    return promise.then(value => {
+      return processFn(item).then(r => [...value, r])
+    })
+  }, Promise.resolve([]))
 }
 
 // =============================================================================
@@ -167,5 +182,11 @@ export function fetchSequential(items, processFn) {
 //   robustFetch(Promise.reject(new Error("fail")), "default", () => {}) => resolves with "default"
 //
 export function robustFetch(promise, fallback, logFn) {
-  throw new Error('Implement robustFetch');
+  return promise.then(value => {
+    return value
+  }).catch(error => {
+    return fallback
+  }).finally(() => {
+    logFn('done')
+  })
 }
