@@ -1,15 +1,13 @@
 // PROMISE BASICS 7 - Practice Exercise
 //
-// This exercise gives you more practice with the patterns you found challenging
-// in exercise 6: retry patterns, parallel + filtering, sequential reduce, and
-// sequential try.
-//
 // CONCEPTS:
 //   - Retry with backoff (delay doubles each time)
 //   - Promise.allSettled() + result categorisation
 //   - Sequential execution with reduce() to build an array
 //   - Sequential try-until-condition pattern
 //   - Timeout pattern with Promise.race()
+
+//import { find } from "core-js/core/array";
 
 // =============================================================================
 // TASK 1: Retry with exponential backoff
@@ -42,7 +40,21 @@
 //   retryBackoff(alwaysFails, 3, 50) => rejects with Error("nope")
 //
 export function retryBackoff(fn, attempts, delayMs) {
-  throw new Error('Implement retryBackoff');
+  if (attempts == 1)
+    return fn()
+  if (attempts >1)
+  {
+    const delay = (ms) =>{
+      return new Promise(resolve => {setTimeout(resolve,ms)});
+    }
+    return fn().then(value => {
+      return value
+    }).catch(() => {
+      return delay(delayMs).then(() => {
+        return retryBackoff(fn, attempts-1, delayMs*2)
+      })
+    })
+  }
 }
 
 // =============================================================================
@@ -69,7 +81,17 @@ export function retryBackoff(fn, attempts, delayMs) {
 //   parallelSummary([], fetchFn) => { succeeded: [], failed: [] }
 //
 export function parallelSummary(items, fetchFn) {
-  throw new Error('Implement parallelSummary');
+  let promises = items.map(item => fetchFn(item))
+  return Promise.allSettled(promises).then(result => {
+      return result.reduce((acc,curr) =>{
+      if (curr.status == 'fulfilled')
+      {
+        acc.succeeded.push(curr.value)
+      }
+      else acc.failed.push(curr.reason.message)
+      return acc
+    }, {succeeded: [], failed: []})
+  })
 }
 
 // =============================================================================
@@ -92,7 +114,11 @@ export function parallelSummary(items, fetchFn) {
 //   sequentialMap([], double) => []
 //
 export function sequentialMap(items, processFn) {
-  throw new Error('Implement sequentialMap');
+  return items.reduce((promise, curr) => {
+    return promise.then(value =>{
+      return processFn(curr).then(r => [...value,r])
+    })
+  }, Promise.resolve([]))
 }
 
 // =============================================================================
@@ -132,5 +158,16 @@ export function sequentialMap(items, processFn) {
 //   findMatching([], isEven) => rejects with Error("No match found")
 //
 export function findMatching(fns, condition) {
-  throw new Error('Implement findMatching');
+  if (fns.length == 0)
+    return Promise.reject(new Error('No match found'))
+
+  return fns[0]().then(value => {
+    if (condition(value)) return value
+    else 
+    {
+      return findMatching(fns.slice(1),condition)
+    }
+  }).catch(() => {
+    return findMatching(fns.slice(1),condition)
+  })
 }
