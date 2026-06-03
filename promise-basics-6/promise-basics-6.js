@@ -12,6 +12,8 @@
 //   - Sequential execution - reduce() chain
 //   - Error recovery - .catch() and .finally()
 
+import { retry } from "../promise-basics-5/promise-basics-5"
+
 // =============================================================================
 // TASK 1: Get the first promise to SETTLE - Promise.race()
 // =============================================================================
@@ -36,7 +38,7 @@
 //   firstSettled(rejects) => rejects with Error("boom")
 //
 export function firstSettled(promises) {
-  throw new Error('Implement firstSettled');
+  return Promise.race(promises)
 }
 
 // =============================================================================
@@ -65,7 +67,8 @@ export function firstSettled(promises) {
 //   ]
 //
 export function allResults(fns) {
-  throw new Error('Implement allResults');
+  let promises = fns.map(fn => fn())
+  return Promise.allSettled(promises)
 }
 
 // =============================================================================
@@ -101,7 +104,19 @@ export function allResults(fns) {
 //   retryWithDelay(alwaysFails, 3, 50) => rejects with Error("nope")
 //
 export function retryWithDelay(fn, attempts, delayMs) {
-  throw new Error('Implement retryWithDelay');
+  if (attempts == 1)
+    return fn()
+  if (attempts>1)
+  {
+    const delay = (ms) =>{
+        return new Promise(resolve => setTimeout(resolve,ms))
+      }
+    return fn().catch(() => {
+      return delay(delayMs).then(() => {
+        return retryWithDelay(fn,attempts-1,delayMs)
+      })
+    })
+  }
 }
 
 // =============================================================================
@@ -126,7 +141,10 @@ export function retryWithDelay(fn, attempts, delayMs) {
 //   fetchSuccessful([], fetchFn) => []
 //
 export function fetchSuccessful(items, fetchFn) {
-  throw new Error('Implement fetchSuccessful');
+  let promises = items.map(item => fetchFn(item));
+  return Promise.allSettled(promises).then(value => {
+    return value.filter(result => result.status === 'fulfilled').map(r => r.value)
+    })
 }
 
 // =============================================================================
@@ -152,7 +170,11 @@ export function fetchSuccessful(items, fetchFn) {
 //   buildObject([], processFn) => {}
 //
 export function buildObject(items, processFn) {
-  throw new Error('Implement buildObject');
+  return items.reduce((promise,curr) =>{
+    return promise.then((value) => {
+       return processFn(curr).then(r => ({...value, [curr.key]:r }))
+    })
+  } ,Promise.resolve({}))
 }
 
 // =============================================================================
@@ -187,5 +209,17 @@ export function buildObject(items, processFn) {
 //   trySequential([]) => rejects with Error("No functions to try")
 //
 export function trySequential(fns) {
-  throw new Error('Implement trySequential');
+  if (fns.length == 0)
+    return Promise.reject(new Error('No functions to try'));
+  if (fns.length ==1)
+    return fns[0]()
+  if (fns.length >1)
+  {
+    return fns[0]().then(value => {
+      return value
+    }).catch(() => {
+      return trySequential(fns.slice(1))
+    })
+  }
+ 
 }

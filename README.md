@@ -117,6 +117,7 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 107.3 | Promises Basics-3                  | ✅     |
 | 107.4 | Promises Basics-4                  | ✅     |
 | 107.5 | Promises Basics-5                  | ✅     |
+| 107.6 | Promises Basics-6                  | ✅     |
 
 ---
 
