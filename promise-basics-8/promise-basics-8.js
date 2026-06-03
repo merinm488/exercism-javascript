@@ -1,7 +1,5 @@
 // PROMISE BASICS 8 - Practice Exercise
 //
-// This exercise gives you more practice with promise patterns, including
-// a new concept: Promise.race() for timeouts.
 //
 // CONCEPTS:
 //   - Timeout pattern with Promise.race()
@@ -34,7 +32,14 @@
 //   withTimeout(fast, 100) => resolves with "quick"
 //
 export function withTimeout(fn, ms) {
-  throw new Error('Implement withTimeout');
+  const delayPromise = new Promise((_,reject) =>{
+    return setTimeout(() => {
+      reject(new Error('Timed out'))
+    }, ms);
+  })
+  return Promise.race([fn(), delayPromise]).then(value => {
+    return value
+  })
 }
 
 // =============================================================================
@@ -59,7 +64,11 @@ export function withTimeout(fn, ms) {
 //   sequentialFilter([], isBig) => []
 //
 export function sequentialFilter(items, testFn) {
-  throw new Error('Implement sequentialFilter');
+  return items.reduce((promise, curr) => {
+    return promise.then(value => {
+      return testFn(curr).then(r => r ? [...value,curr] : value )
+    })
+  },Promise.resolve([]))
 }
 
 // =============================================================================
@@ -93,7 +102,23 @@ export function sequentialFilter(items, testFn) {
 //   retryCapped(alwaysFails, 3, 50, 200) => rejects with Error("nope")
 //
 export function retryCapped(fn, attempts, delayMs, maxDelay) {
-  throw new Error('Implement retryCapped');
+  if (attempts == 1)
+    return fn()
+  if (attempts>1)
+  {
+    const delayTimer = (ms) =>{
+      return new Promise(resolve => {
+        return setTimeout(resolve,ms)
+      })
+    }
+    return fn().then(value => {
+      return value
+    }).catch(() => {
+      return delayTimer(delayMs).then(() => {
+        return retryCapped(fn,attempts-1,Math.min(delayMs*2,maxDelay),maxDelay)
+      })
+    })
+  }
 }
 
 // =============================================================================
@@ -131,5 +156,11 @@ export function retryCapped(fn, attempts, delayMs, maxDelay) {
 //   firstResolved([]) => rejects with Error("All failed")
 //
 export function firstResolved(fns) {
-  throw new Error('Implement firstResolved');
+  if (fns.length == 0)
+    return Promise.reject(new Error('All failed'))
+  return fns[0]().then(value => {
+    return value
+  }).catch(() =>{
+    return firstResolved(fns.slice(1))
+  })
 }
