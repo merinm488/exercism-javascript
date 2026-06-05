@@ -1,0 +1,19 @@
+{
+  "name": "@exercism/javascript-promise-basics-10",
+  "description": "Practice exercise for learning Promises - Exercise 10.",
+  "author": "Merin",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "@exercism/babel-preset-javascript": "^0.5.1",
+    "@jest/globals": "^29.7.0",
+    "@types/node": "^24.3.0",
+    "babel-jest": "^29.7.0",
+    "core-js": "~3.42.0",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "NODE_OPTIONS='--unhandled-rejections=warn' jest"
+  }
+}
