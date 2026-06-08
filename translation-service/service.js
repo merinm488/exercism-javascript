@@ -1,4 +1,11 @@
 /// <reference path="./global.d.ts" />
+
+import { NotAvailable } from "./errors";
+
+//import { resolve } from "core-js/fn/promise";
+
+//import { resolve } from "core-js/fn/promise";
+
 // @ts-check
 //
 // The lines above enable type checking for this file. Various IDEs interpret
@@ -27,8 +34,9 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    let result = Promise.resolve(this.api.fetch(text))
-    
+    return this.api.fetch(text).then(value => {
+      return value.translation
+    })
   }
 
   /**
@@ -42,7 +50,11 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error('Implement the batch function');
+    if (texts.length === 0)
+      return Promise.reject(new BatchIsEmpty())
+    return Promise.all(texts.map(text => this.api.fetch(text))).then(value => {
+      return value.map(item => item.translation)
+    })
   }
 
   /**
@@ -54,8 +66,21 @@ export class TranslationService {
    * @param {string} text
    * @returns {Promise<void>}
    */
+  
   request(text) {
-    throw new Error('Implement the request function');
+   return new Promise((resolve,reject) => {
+    const retry = (attempts) => {
+      this.api.request(text, error => {
+        if (!error)
+          resolve(undefined)
+        else if(attempts>1)
+          retry(attempts-1)
+        else
+          reject(error)
+      });
+    }
+   retry(3);
+   });
   }
 
   /**
@@ -68,8 +93,26 @@ export class TranslationService {
    * @param {number} minimumQuality
    * @returns {Promise<string>}
    */
+
+  
   premium(text, minimumQuality) {
-    throw new Error('Implement the premium function');
+    const checkQuality = (value) => {
+      if (value.quality < minimumQuality)
+        throw new QualityThresholdNotMet(text);
+      else 
+        return value.translation;
+    }
+
+    return this.api.fetch(text).then(checkQuality).catch((error) => {
+      if(error instanceof NotAvailable)
+      {
+        return this.request(text).then(() => {
+          return this.api.fetch(text).then(checkQuality)
+        })
+      }
+      else
+        throw error
+    })
   }
 }
 
@@ -105,3 +148,4 @@ Requested a batch translation, but there are no texts in the batch.
     );
   }
 }
+
