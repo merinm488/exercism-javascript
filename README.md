@@ -125,6 +125,11 @@ This repository contains my solutions to the Exercism JavaScript track.
 | 107.10 | Promises Basics-10                 | ✅     |
 | 107.11 | Promises Basics-11                 | ✅     |
 | 107.12 | Promises Basics-12                 | ✅     |
+| 107.13 | Promises Intermediate-13           | ✅     |
+| 107.14 | Promises Intermediate-14           | ✅     |
+| 107.15 | Promises Intermediate-15           | ✅     |
+| 107.16 | Promises Intermediate-16           | ✅     |
+| 107.17 | Promises Intermediate-17           | ✅     |
 
 ---
 
