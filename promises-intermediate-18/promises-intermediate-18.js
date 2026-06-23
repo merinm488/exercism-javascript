@@ -39,7 +39,11 @@
 //   should your initial promise resolve to?
 
 export function reduceAsync(items, fn, initialValue) {
-  // Your code here
+  return items.reduce((promise,curr) => {
+    return promise.then(value => {
+      return fn(value,curr)
+    })
+  },Promise.resolve(initialValue))
 }
 
 // =============================================================================
@@ -68,7 +72,10 @@ export function reduceAsync(items, fn, initialValue) {
 //   promise that rejects after a setTimeout.
 
 export function timeoutPromise(promise, ms) {
-  // Your code here
+  const timer = new Promise((_,reject) => setTimeout(() => {
+    reject(new Error('timed out'))
+  }, ms))
+  return Promise.race([promise,timer])
 }
 
 // =============================================================================
@@ -97,7 +104,17 @@ export function timeoutPromise(promise, ms) {
 //   that chains promises, but stops early when the condition is met.
 
 export function someAsync(items, predicateFn) {
-  // Your code here
+  let promise = Promise.resolve(false);
+
+  for (const item of items) {
+    promise = promise.then(result => {
+      if (result) {
+        return result;
+      }
+      return predicateFn(item);
+    });
+  }
+    return promise;
 }
 
 // =============================================================================
@@ -124,7 +141,9 @@ export function someAsync(items, predicateFn) {
 //   values are true?
 
 export function everyAsync(items, predicateFn) {
-  // Your code here
+  return Promise.all(items.map(predicateFn)).then(result => {
+    return result.every(Boolean)
+  })
 }
 
 // =============================================================================
@@ -156,7 +175,11 @@ export function everyAsync(items, predicateFn) {
 //   becomes the new accumulated value for the next function.
 
 export function waterfall(fns, initialValue) {
-  // Your code here
+  return fns.reduce((promise,curr) => {
+    return promise.then(value => {
+      return curr(value)
+    })
+  }, Promise.resolve(initialValue))
 }
 
 // =============================================================================
@@ -191,5 +214,10 @@ export function waterfall(fns, initialValue) {
 //   handlers return a similar object structure?
 
 export function attempt(fn) {
-  // Your code here
+  return function newFn(...args) {
+    return Promise.resolve()
+      .then(() => fn(...args))
+      .then(value => ({ ok: true, value }))
+      .catch(err => ({ ok: false, error: err }))
+  }
 }
